@@ -1,0 +1,37 @@
+{
+  "name": "selling-tickets-system-backend",
+  "version": "0.0.1",
+  "description": "The API Servier for selling tickets system",
+  "author": "Nikolay Turov",
+  "license": "MIT",
+  "scripts": {
+    "prod": "pm2 start index.js --name=server",
+    "docker": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "eslint": "eslint controllers models routes services",
+    "eslintfix": "eslint controllers models routes services --fix"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "mandrill-api": "^1.0.45",
+    "mongoose": "^5.6.4",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0",
+    "validator": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-plugin-node": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=8.10.0"
+  }
+}

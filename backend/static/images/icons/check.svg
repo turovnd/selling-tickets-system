@@ -1,0 +1,18 @@
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#69A0C5" offset="0%"></stop>
+            <stop stop-color="#5BE5C4" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Web-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Select-Tickets-New" transform="translate(-291.000000, -810.000000)">
+            <g id="Days" transform="translate(165.000000, 762.000000)">
+                <g id="check" transform="translate(126.000000, 48.000000)">
+                    <circle id="Oval" fill="url(#linearGradient-1)" cx="13" cy="13" r="13"></circle>
+                    <polyline id="Path-2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="8 13.5 11 17 17 9"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

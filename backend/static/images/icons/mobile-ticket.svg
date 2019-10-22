@@ -1,0 +1,34 @@
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Web-Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Your-Details" transform="translate(-165.000000, -259.000000)" fill-rule="nonzero">
+            <g id="Mobile-Ticket" transform="translate(165.000000, 259.000000)">
+                <g id="mobile_ticket">
+                    <path d="M40,29 L7,29 L7,21.9354839 L7.58709677,21.9354839 C8.65419355,21.9354839 10.3225806,21.0670968 10.3225806,20 C10.3225806,18.9329032 8.65419355,18.0645161 7.58709677,18.0645161 L7,18.0645161 L7,11 L40,11 L40,29 Z" id="Path" fill="#75C8B0"></path>
+                    <rect id="Rectangle" fill="#000000" x="19" y="11" width="2" height="3"></rect>
+                    <rect id="Rectangle" fill="#000000" x="19" y="16" width="2" height="2"></rect>
+                    <rect id="Rectangle" fill="#000000" x="19" y="19" width="2" height="2"></rect>
+                    <rect id="Rectangle" fill="#000000" x="19" y="22" width="2" height="2"></rect>
+                    <rect id="Rectangle" fill="#000000" x="19" y="26" width="2" height="3"></rect>
+                    <rect id="Rectangle" fill="#000000" x="11" y="14" width="2" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="14" y="14" width="2" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="32" y="25" width="1" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="29" y="25" width="1" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="35" y="25" width="1" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="13" y="17" width="4" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="13" y="21" width="4" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="13" y="19" width="4" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="31" y="16" width="6" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="23" y="16" width="6" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="23" y="19" width="15" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="23" y="22" width="13" height="1"></rect>
+                    <path d="M22,34 L1,34 L1,6 L22,6 L22,11 L23,11 L23,3.22580645 C23,1.44709677 21.7787097,0 20,0 L3.22580645,0 C1.44709677,0 0,1.44709677 0,3.22580645 L0,36.8 C0,38.5787097 1.44709677,40 3.22580645,40 L20,40 C21.7787097,40 23,39.3787097 23,37.6 L23,29 L22,29 L22,34 Z M3.2,1 L20,1 C21.0670968,1 22,1.83290323 22,2.9 L22,5 L1,5 L1,3 C1,1.93290323 2.13290323,1 3.2,1 Z M20,39 L3.2,39 C2.13290323,39 1,37.8670968 1,36.8 L1,35 L22,35 L22,37.1 C22,38.1670968 21.0670968,39 20,39 Z" id="Shape" fill="#324049"></path>
+                    <polygon id="Rectangle" fill="#324049" points="8 36 15.2 36 15.2 37.6 8 37.6"></polygon>
+                    <rect id="Rectangle" fill="#324049" x="3" y="8" width="1" height="2"></rect>
+                    <polygon id="Rectangle" fill="#324049" points="3 11 4 11 4 32 3 32"></polygon>
+                    <rect id="Rectangle" fill="#000000" x="13" y="23" width="4" height="1"></rect>
+                    <rect id="Rectangle" fill="#000000" x="10" y="25" width="1" height="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

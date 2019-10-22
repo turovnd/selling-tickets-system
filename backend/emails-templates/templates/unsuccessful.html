@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{SUBJECT}}</title>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="font-family: 'Montserrat';background-color: #F2F2F2;font-weight: 300;font-size: 14px;">
+<center style="padding: 30px 0;">
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="680" style="background-color: #FFF;margin-bottom: 30px;padding: 40px;">
+        <!-- HEADER START -->
+        <tr>
+            <td valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="position: relative;margin-bottom: 30px;">
+                    <tr>
+                        <td align="left" valign="top">
+                            <img src="{{COMPANY_LOGO}}" alt="{{COMPANY_NAME}}" width="185px">
+                        </td>
+                        <td align="right" valign="top">
+                            <small style="color: #32404980;">{{BOOKING_REFERENCE}}</small>
+                            <h4 style="font-weight: 400;font-size: 16px;margin: 5px 0 0;">{{ORDER_NUMBER}}</h4>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- HEADER END -->
+        <!-- CONTENT START -->
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="position: relative;margin-bottom: 30px;">
+                    <tr>
+                        <td valign="middle">
+                            <img src="{{CONTENT_ICON}}" alt="" style="float: left;margin-right: 30px;">
+                        </td>
+                        <td>
+                            <h2 style="font-weight: 400;margin: 0 0 15px;font-size: 24px;">
+                                {{CONTENT_TITLE}}
+                            </h2>
+                            <p style="font-weight: 400;margin: 0;">
+                                {{CONTENT_SUBTITLE}}
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="position: relative;margin-bottom: 0;color: #32404980;">
+                    <tr>
+                        <td>
+                            {{#each CONTENT_BODY}}
+                            <p style="font-weight: 400;margin: 0 0 15px;">
+                                {{{this}}}
+                            </p>
+                            {{/each}}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- CONTENT END -->
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="680">
+        <tr valign="top">
+            <td align="center">
+                <a href="mailto:{{COMPANY_EMAIL}}" style="color: #324049;font-weight: 700;text-decoration: none;margin-right: 30px;margin-bottom: 20px;display: inline-block;">
+                    <img src="{{ICON_EMAIL}}" alt="Email" style="margin-right: 5px;">
+                    {{COMPANY_EMAIL}}
+                </a>
+                <a href="tel:{{COMPANY_PHONE}}" style="color: #324049;font-weight: 700;text-decoration: none;margin-right: 0;margin-bottom: 20px;display: inline-block;">
+                    <img src="{{ICON_PHONE}}" alt="Phone" style="margin-right: 5px;">
+                    {{COMPANY_PHONE}}
+                </a>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td align="center">
+                <a href="{{unsub UNSUBSCRIBE_LINK}}" style="font-weight: 300;color: #324049;padding: 0 10px;margin-bottom: 10px;border-right: 1px solid #324049;display: inline-block;">
+                    {{UNSUBSCRIBE}}
+                </a>
+                <a href="{{PRIVACY_POLICE_LINK}}" style="font-weight: 300;color: #324049;padding: 0 10px;margin-bottom: 10px;border-right: 0;display: inline-block;">
+                    {{PRIVACY_POLICE}}
+                </a>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td align="center">
+                © {{CURRENT_YEAR}} {{COMPANY_NAME}}
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>

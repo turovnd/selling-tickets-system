@@ -1,0 +1,90 @@
+{
+  "SUBJECT": {
+    "en": "Your booking _VAL_ is pending confirmation",
+    "ru": "Ваш заказ _VAL_ ожидает подтверждения"
+  },
+  "COMPANY_LOGO": {
+    "en": "https://localhost:3100/api/images/logo.png",
+    "ru": "https://localhost:3100/api/images/logo.png"
+  },
+  "COMPANY_EMAIL": {
+    "en": "support@site.com",
+    "ru": "support@site.com"
+  },
+  "COMPANY_PHONE": {
+    "en": "(358) 123 33 33",
+    "ru": "(358) 123 33 33"
+  },
+  "COMPANY_NAME": {
+    "en": "Company Name",
+    "ru": "Имя компания"
+  },
+  "ICON_CALENDAR": {
+    "en": "https://localhost:3100/api/icons/calendar.png",
+    "ru": "https://localhost:3100/api/icons/calendar.png"
+  },
+  "ICON_GUESTS": {
+    "en": "https://localhost:3100/api/icons/guests.png",
+    "ru": "https://localhost:3100/api/icons/guests.png"
+  },
+  "ICON_PHONE": {
+    "en": "https://localhost:3100/api/icons/phone.png",
+    "ru": "https://localhost:3100/api/icons/phone.png"
+  },
+  "ICON_EMAIL": {
+    "en": "https://localhost:3100/api/icons/email.png",
+    "ru": "https://localhost:3100/api/icons/email.png"
+  },
+  "BOOKING_REFERENCE": {
+    "en": "Booking reference",
+    "ru": "Номер брони"
+  },
+  "CONTENT_TITLE": {
+    "en": "Your booking is pending confirmation",
+    "ru": "Ваш заказ ожидает подтверждения"
+  },
+  "CONTENT_BODY": {
+    "en": [
+      "Hello, we receive your order! Now we are preparing your tickets! <b>You’ll receive an update soon</b>"
+    ],
+    "ru": [
+      "Здравствуйте, мы получили ваш заказ! Теперь мы готовим ваши билеты! <b>Скоро вы получите обновление</b>"
+    ]
+  },
+  "ORDER_STATUS": {
+    "en": "Pending",
+    "ru": "В ожидании"
+  },
+  "ORDER_ICON": {
+    "en": "https://localhost:3100/api/icons/pending.png",
+    "ru": "https://localhost:3100/api/icons/pending.png"
+  },
+  "GUESTS": {
+    "en": "Guests",
+    "ru": "Гостей"
+  },
+  "GUEST": {
+    "en": "Guest",
+    "ru": "Гость"
+  },
+  "DETAILS_BTN": {
+    "en": "View details",
+    "ru": "Посмотреть детали"
+  },
+  "UNSUBSCRIBE": {
+    "en": "Unsubscribe",
+    "ru": "Отписаться"
+  },
+  "UNSUBSCRIBE_LINK": {
+    "en": "https://localhost:3100/api/v1/auth/unsubscribe",
+    "ru": "https://localhost:3100/api/v1/auth/unsubscribe"
+  },
+  "PRIVACY_POLICE": {
+    "en": "Privacy Police",
+    "ru": "Политика конфиденциальности"
+  },
+  "PRIVACY_POLICE_LINK": {
+    "en": "https://localhost:3100/about?tab=policy&lang=en",
+    "ru": "https://localhost:3100/about?tab=policy&lang=ru"
+  }
+}

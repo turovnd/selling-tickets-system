@@ -1,4 +1,4 @@
 .idea
 database
-*package-lock.json
+files
 *.DS_Store

@@ -1,0 +1,4 @@
+.idea
+database
+*package-lock.json
+*.DS_Store

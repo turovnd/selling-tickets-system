@@ -6,27 +6,23 @@ on:
       - master
       - development  
   pull_request:
-    branches:
-      - '!master'
-      - '!development'
+    branches-ignore: 
+      - master
+      - development
 
 jobs:
   build:
-
+    name: Setup & Build
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [8]
-
     steps:
     - uses: actions/checkout@v1
     - name: Setup Node
       uses: actions/setup-node@v1
+      with:
+        node-version: '8.x'
     - name: Install npm packages
       run: npm ci
     - name: ESLint checks
       run: npm run eslint
     - name: Run tests
       run: npm run test
-

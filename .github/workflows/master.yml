@@ -28,3 +28,9 @@ jobs:
   deploy:
     name: Deploy to Docker
     runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.x'

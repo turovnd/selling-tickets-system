@@ -1,6 +1,14 @@
-name: Node CI
+name: Push/Pull on any branch
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - '!master'
+      - '!development'
+  pull_request:
+    branches:
+      - '!master'
+      - '!development'
 
 jobs:
   build:
@@ -9,17 +17,15 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x]
+        node-version: [8]
 
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup Node
       uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, eslint
-      run: |
-        npm ci
-        npm run eslint
-      env:
-        CI: true
+    - name: Install npm packages
+      run: npm ci
+    - name: ESLint checks
+      run: npm run eslint
+    - name: Run tests
+      run: npm run test

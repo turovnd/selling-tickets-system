@@ -40,6 +40,6 @@ jobs:
         github-token: ${{ secrets.github_token }}
 
     - name: Run coverage
-    - uses: codecov/codecov-action@v1.0.3
+      uses: codecov/codecov-action@v1.0.3
       with:
         token: ${{secrets.CODECOV_TOKEN}}

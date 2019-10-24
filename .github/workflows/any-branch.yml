@@ -23,10 +23,8 @@ jobs:
       with:
         node-version: '8.x'
     
-    - name: Install npm dependences, test-coverage
-      run: |
-        npm ci
-        make test-coverage
+    - name: Install npm dependences
+      run: npm install
       
     - name: Run ESLint checks
       run: npm run eslint
@@ -34,10 +32,10 @@ jobs:
     - name: Run Unit tests
       run: npm run test
       
-    - name: Run Coveralls
-      uses: coverallsapp/github-action@v1.0.1
-      with:
-        github-token: ${{ secrets.github_token }}
+#    - name: Run Coveralls
+#      uses: coverallsapp/github-action@v1.0.1
+#      with:
+#        github-token: ${{ secrets.github_token }}
 
     - name: Run coverage
       uses: codecov/codecov-action@v1.0.3

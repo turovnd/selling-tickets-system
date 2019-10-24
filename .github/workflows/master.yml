@@ -1,0 +1,30 @@
+name: Push/Pull on master branch
+
+on: 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: 
+      - master
+
+jobs:
+  build:
+    name: Setup & Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.x'
+    - name: Install npm packages
+      run: npm ci
+    - name: ESLint checks
+      run: npm run eslint
+    - name: Run tests
+      run: npm run test
+      
+  deploy:
+    name: Deploy to Docker
+    runs-on: ubuntu-latest

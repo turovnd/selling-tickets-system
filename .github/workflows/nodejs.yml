@@ -20,6 +20,6 @@ jobs:
     - name: npm install, eslint
       run: |
         npm ci
-        npm eslint
+        npm run eslint
       env:
         CI: true

@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{SUBJECT}}</title>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="font-family: 'Montserrat';background-color: #F2F2F2;font-weight: 300;font-size: 14px;">
+<center style="padding: 30px 0;">
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="680" style="background-color: #FFF;margin-bottom: 30px;padding: 40px;">
+        <!-- HEADER START -->
+        <tr>
+            <td valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="position: relative;margin-bottom: 30px;">
+                    <tr>
+                        <td align="left" valign="top">
+                            <img src="{{COMPANY_LOGO}}" alt="{{COMPANY_NAME}}" width="185px">
+                        </td>
+                        <td align="right" valign="top">
+                            <small style="color: #32404980;">{{BOOKING_REFERENCE}}</small>
+                            <h4 style="font-weight: 400;font-size: 16px;margin: 5px 0 0;">{{ORDER_NUMBER}}</h4>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- HEADER END -->
+        <!-- BANNER START -->
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="position: relative;margin-bottom: 30px;">
+                    <tr>
+                        <td>
+                            <div style="height: 225px; background: url({{IMAGE_BANNER}}) no-repeat;border-radius: 5px;">
+                                <div style="padding: 60px 50px;">
+                                    <div style="transform: rotate(-2deg);padding: 5px;font-size: 30px;color: #ffffff;font-weight: 700;background-color: #E15577;margin-bottom: 20px;display: table;">
+                                        {{PACK_YOUR_BAGS}}
+                                    </div>
+                                    <div style="font-weight: 300;font-size: 21px;color: #FFFFFF;">
+                                        {{YOU_ARE_GOING_TO}} {{PARK_NAME}}
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- BANNER END -->
+        <!-- CONTENT START -->
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="position: relative;margin-bottom: 15px;">
+                    <tr>
+                        <td>
+                            <h2 style="font-weight: 400;margin: 0 0 15px;font-size: 24px;">
+                                {{CONTENT_TITLE}}
+                            </h2>
+                            {{#each CONTENT_BODY}}
+                            <p style="font-weight: 400;margin: 0 0 15px;">
+                                {{{this}}}
+                            </p>
+                            {{/each}}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- CONTENT END -->
+        <!-- CARD START -->
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="background-color: #FAF8F8;">
+                    <tr>
+                        <td style="position: relative;padding: 30px;">
+                            <div style="position: absolute;top: -7px;left: -7px;transform: rotate(-2deg);padding: 13px;color: #ffffff;font-weight: 700;background-color: #75C8B0;display: table;">
+                                <img src="{{ORDER_ICON}}" alt="Check" style="float: left;margin-right: 7px;">
+                                {{ORDER_STATUS}}
+                            </div>
+                            <img src="{{PARK_IMAGE}}" alt="Park image" width="210px" style="float: left;margin-right: 30px;">
+                            <div style="float: left;width: 300px;">
+                                <p style="font-weight: 400;margin: 0 0 15px;">
+                                    <img height="40" src="{{PARK_LOGO}}" alt="Park logo">
+                                    <span style="color: #324049;font-weight: 700;float: right;">
+                                        {{TICKET_PRICE}}
+                                    </span>
+                                </p>
+                                <p style="font-weight: 400;margin: 0 0 15px;">
+                                    {{TICKET_TITLE}}
+                                </p>
+                                <p style="font-weight: 400;margin: 0 0 15px;">
+                                    <img src="{{ICON_CALENDAR}}" alt="Calendar" style="margin-right: 5px;">
+                                    {{TICKET_DATE}}
+                                </p>
+                                <p style="font-weight: 400;margin: 0;">
+                                    <img src="{{ICON_GUESTS}}" alt="Guests" style="margin-right: 5px;">
+                                    {{TICKET_GUESTS}}
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href="{{DOWNLOAD_LINK}}" style="display: table;width: 100%;padding: 22px 0;text-align: center;color: #ffffff;font-weight: 700;text-decoration: none;background-color: #E15577;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+                                {{DOWNLOAD_BTN}}
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- CARD END -->
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" height="100%" width="680">
+        <tr valign="top">
+            <td align="center">
+                <a href="mailto:{{COMPANY_EMAIL}}" style="color: #324049;font-weight: 700;text-decoration: none;margin-right: 30px;margin-bottom: 20px;display: inline-block;">
+                    <img src="{{ICON_EMAIL}}" alt="Email" style="margin-right: 5px;">
+                    {{COMPANY_EMAIL}}
+                </a>
+                <a href="tel:{{COMPANY_PHONE}}" style="color: #324049;font-weight: 700;text-decoration: none;margin-right: 0;margin-bottom: 20px;display: inline-block;">
+                    <img src="{{ICON_PHONE}}" alt="Phone" style="margin-right: 5px;">
+                    {{COMPANY_PHONE}}
+                </a>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td align="center">
+                <a href="{{unsub UNSUBSCRIBE_LINK}}" style="font-weight: 300;color: #324049;padding: 0 10px;margin-bottom: 10px;border-right: 1px solid #324049;display: inline-block;">
+                    {{UNSUBSCRIBE}}
+                </a>
+                <a href="{{PRIVACY_POLICE_LINK}}" style="font-weight: 300;color: #324049;padding: 0 10px;margin-bottom: 10px;border-right: 0;display: inline-block;">
+                    {{PRIVACY_POLICE}}
+                </a>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td align="center">
+                © {{CURRENT_YEAR}} {{COMPANY_NAME}}
+            </td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>

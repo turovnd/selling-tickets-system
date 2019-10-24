@@ -1,7 +1,7 @@
 'use strict';
 
 const path          = require('path');
-const Models        = require('../../models');
+const Models        = require('../models');
 const sourceFolder  = path.join(__dirname, "..", "_source");
 
 let mockData    = [

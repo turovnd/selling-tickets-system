@@ -4,9 +4,9 @@ const path          = require('path');
 const fs            = require('fs');
 const crypto        = require('crypto');
 
-const Models        = require('../models');
-const mandrill      = require('../services/mandrill');
-const CloudPayments = require('../services/cloudpayments');
+const Models        = require('../models/index');
+const mandrill      = require('../backend/services/mandrill');
+const CloudPayments = require('../backend/services/cloudpayments');
 
 /**
  * Decode file to Base64 string

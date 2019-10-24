@@ -2,7 +2,7 @@
 
 const express   = require('express');
 const router    = express.Router();
-const cParks    = require('../../controllers/parks');
+const cParks    = require('../../../controllers/parks');
 
 const COURSES_FILE_PATH = require('path').join(__dirname, "..", "..", "_source", "courses.json");
 

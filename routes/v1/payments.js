@@ -2,7 +2,7 @@
 
 const express   = require('express');
 const router    = express.Router();
-const cPayments = require('../../controllers/payments');
+const cPayments = require('../../../controllers/payments');
 
 
 /**

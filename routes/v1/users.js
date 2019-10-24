@@ -4,7 +4,7 @@ const express   = require('express');
 const router    = express.Router();
 
 const passport  = require('../../services/passport');
-const cUsers    = require('../../controllers/users');
+const cUsers    = require('../../../controllers/users');
 
 /**
  * Check if user exist

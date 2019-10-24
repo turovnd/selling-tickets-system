@@ -4,7 +4,7 @@ const fs            = require('fs');
 const path          = require('path');
 
 const crypto        = require('crypto');
-const Models        = require('../models');
+const Models        = require('../models/index');
 
 const avatarURL     = process.env.API_URL + "/avatars/";
 const avatarPath    = path.join(__dirname, '..', 'static', 'avatars');

@@ -2,8 +2,8 @@
 
 const express       = require('express');
 const router        = express.Router();
-const cAuth         = require('../../controllers/authentication');
-const cUsers        = require('../../controllers/users');
+const cAuth         = require('../../../controllers/authentication');
+const cUsers        = require('../../../controllers/users');
 
 
 /**

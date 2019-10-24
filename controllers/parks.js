@@ -1,6 +1,6 @@
 'use strict';
 
-const Models       = require('../models');
+const Models       = require('../models/index');
 
 const parksOrder   = [ 'DL', 'US', 'SW', 'DLP' ]; // TODO - store in DB
 

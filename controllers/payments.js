@@ -1,8 +1,8 @@
 'use strict';
 
 const URL           = require('url');
-const Models        = require('../models');
-const CloudPayments = require('../services/cloudpayments');
+const Models        = require('../models/index');
+const CloudPayments = require('../backend/services/cloudpayments');
 
 const allowedQueries = ['userid', 'ticket', 'maxpass'];
 

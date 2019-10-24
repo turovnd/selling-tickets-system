@@ -4,7 +4,7 @@ const jwt       = require('jsonwebtoken');
 const crypto    = require('crypto');
 
 const Models    = require('../models/index');
-const mandrill  = require('../backend/services/mandrill');
+const mandrill  = require('../services/mandrill');
 
 
 /**

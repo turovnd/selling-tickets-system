@@ -2,9 +2,9 @@ name: Push/Pull on any branch
 
 on: 
   push:
-    branches:
-      - '!master'
-      - '!development'
+    branches-ignore: 
+      - master
+      - development  
   pull_request:
     branches:
       - '!master'

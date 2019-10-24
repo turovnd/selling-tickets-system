@@ -14,15 +14,32 @@ jobs:
   build:
     name: Setup & Build
     runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v1
+      
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
         node-version: '8.x'
-    - name: Install npm packages
-      run: npm ci
-    - name: ESLint checks
+    
+    - name: Install npm dependences, test-coverage
+      run: |
+        npm ci
+        make test-coverage
+      
+    - name: Run ESLint checks
       run: npm run eslint
-    - name: Run tests
+      
+    - name: Run Unit tests
       run: npm run test
+      
+    - name: Run Coveralls
+      uses: coverallsapp/github-action@v1.0.1
+      with:
+        github-token: ${{ secrets.github_token }}
+
+    - name: Run coverage
+    - uses: codecov/codecov-action@v1.0.3
+      with:
+        token: ${{secrets.CODECOV_TOKEN}}

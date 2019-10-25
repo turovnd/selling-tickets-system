@@ -32,10 +32,10 @@ jobs:
     - name: Run Unit tests
       run: npm run test
       
-#    - name: Run Coveralls
-#      uses: coverallsapp/github-action@v1.0.1
-#      with:
-#        github-token: ${{ secrets.github_token }}
+    - name: Run Coveralls
+      uses: coverallsapp/github-action@v1.0.1
+      with:
+        github-token: ${{ secrets.github_token }}
 
     - name: Run coverage
       uses: codecov/codecov-action@v1.0.3

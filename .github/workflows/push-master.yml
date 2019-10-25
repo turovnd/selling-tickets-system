@@ -21,22 +21,12 @@ jobs:
     - name: Install npm dependences
       run: npm install
 
-  tests:
-    name: Run tests
-    needs: [setup]
-
-    steps:
-    - name: ESLint
+    - name: ESLint test
       run: npm run eslint
 
     - name: Unit tests
       run: npm run test
 
-  covarege:
-    name: Upload covarege statistic
-    needs: [tests]
-
-    steps:
     - name: Create coverage report
       run: npm run coverage
 

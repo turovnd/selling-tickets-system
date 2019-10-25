@@ -10,7 +10,7 @@
     "dev": "nodemon index.js",
     "eslint": "eslint controllers models routes services",
     "eslintfix": "eslint controllers models routes services --fix",
-    "test": "nyc --reporter=text mocha tests"
+    "test": "nyc --reporter=html --reporter=text mocha tests --exit"
   },
   "dependencies": {
     "axios": "^0.19.0",

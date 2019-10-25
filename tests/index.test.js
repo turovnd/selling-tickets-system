@@ -18,5 +18,8 @@ describe("Students", () => {
         .expect('Content-Type', /json/)
         .expect(404, done);
     });
+    it('ad', done => {
+      done();
+    })
   });
 });

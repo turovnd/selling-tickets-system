@@ -9,7 +9,8 @@
     "docker": "nodemon index.js",
     "dev": "nodemon index.js",
     "eslint": "eslint controllers models routes services",
-    "eslintfix": "eslint controllers models routes services --fix"
+    "eslintfix": "eslint controllers models routes services --fix",
+    "test": "nyc --reporter=text mocha tests"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -28,8 +29,15 @@
     "validator": "^11.1.0"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.7",
     "eslint": "^6.5.1",
-    "eslint-plugin-node": "^10.0.0"
+    "eslint-plugin-node": "^10.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
   },
   "engines": {
     "node": ">=8.10.0"

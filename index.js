@@ -87,5 +87,8 @@ app.listen(process.env.SERVER_PORT, async() => {
         await mandrill.init();
         await cloudpayments.init();
     }
+    db.init();
     console.info('Server Ready! Site: ' + process.env.SERVER_HOST + ":" + process.env.SERVER_PORT);
 });
+
+module.exports = app;

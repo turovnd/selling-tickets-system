@@ -9,6 +9,9 @@ jobs:
   setup:
     name: Setup
     runs-on: ubuntu-latest
+    env:
+      JWT_ACCESS_SECRET: access
+      JWT_REFRESH_SECRET: refresh
 
     steps:
     - uses: actions/checkout@v1

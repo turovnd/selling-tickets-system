@@ -1,5 +1,5 @@
 {
-  "name": "selling-tickets-system-backend",
+  "name": "selling-tickets-system",
   "version": "0.0.1",
   "description": "The API Servier for selling tickets system",
   "author": "Nikolay Turov",
@@ -10,7 +10,8 @@
     "dev": "nodemon index.js",
     "eslint": "eslint controllers models routes services",
     "eslintfix": "eslint controllers models routes services --fix",
-    "test": "nyc --reporter=lcov --reporter=text --reporter-options output=filename.xml mocha tests --exit"
+    "test": "mocha tests --exit",
+    "coverage": "nyc --reporter=lcov --reporter=text mocha tests --exit"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -30,11 +31,9 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
     "coveralls": "^3.0.7",
     "eslint": "^6.5.1",
     "eslint-plugin-node": "^10.0.0",
-    "istanbul": "^0.4.5",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1",
     "supertest": "^4.0.2"

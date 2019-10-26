@@ -1,4 +1,4 @@
 *npm-debug*.log*
 *.git*
-*node_modules(
+*node_modules
 *dist*

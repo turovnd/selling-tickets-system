@@ -48,12 +48,17 @@ jobs:
 
       - name: Docker login
         run: docker login -u ${GITHUB_ACTOR} -p ${GITHUB_TOKEN} docker.pkg.github.com
+        env:
+          GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Docker build && push
         run: |
           VERSION=$(node -p "require('./package.json').version")
-          docker build -t docker.pkg.github.com/{GITHUB_REPOSITORY}/build:{VERSION} .
-          docker push docker.pkg.github.com/{GITHUB_REPOSITORY}/build:{VERSION}
+          docker build -t docker.pkg.github.com/${GITHUB_REPOSITORY}/build:${VERSION} .
+          docker push docker.pkg.github.com/${GITHUB_REPOSITORY}/build:${VERSION}
+        env:
+          GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
 
 # TODO: create release draft
 # TODO: run docker container in the prod cluster

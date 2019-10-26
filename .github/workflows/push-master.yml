@@ -1,0 +1,44 @@
+name: Push on master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    env:
+      JWT_ACCESS_SECRET: access
+      JWT_REFRESH_SECRET: refresh
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.x'
+
+    - name: Install npm dependences
+      run: npm install
+
+    - name: ESLint test
+      run: npm run eslint
+
+    - name: Unit tests
+      run: npm run test
+
+    - name: Create coverage report
+      run: npm run coverage
+
+    - name: Upload to coveralls.io
+      uses: coverallsapp/github-action@v1.0.1
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
+
+# TODO: create release draft
+# TODO: create docker container in GPR
+# TODO: run docker container in the prod cluster

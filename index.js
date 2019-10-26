@@ -10,6 +10,7 @@ const passport      = require('./services/passport');
 const db            = require('./services/database');
 const mandrill      = require('./services/mandrill');
 const cloudpayments = require('./services/cloudpayments');
+const pathToSwaggerUi = require('swagger-ui-dist').getAbsoluteFSPath();
 
 
 // Add Body Parser Middleware
@@ -70,6 +71,11 @@ app.use('/icons', express.static('static/icons'));
 app.use('/avatars', express.static('static/avatars'));
 
 /**
+ * Define static files to draw swagger-ui components
+ */
+app.use(express.static(pathToSwaggerUi));
+
+/**
  * Return 404 if route does not exist
  */
 app.use('/', (req, res, next) => {
@@ -87,5 +93,8 @@ app.listen(process.env.SERVER_PORT, async() => {
         await mandrill.init();
         await cloudpayments.init();
     }
+    db.init();
     console.info('Server Ready! Site: ' + process.env.SERVER_HOST + ":" + process.env.SERVER_PORT);
 });
+
+module.exports = app;

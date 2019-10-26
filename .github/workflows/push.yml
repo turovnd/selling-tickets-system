@@ -1,0 +1,32 @@
+name: Push on any branch
+
+on:
+  push:
+    branches-ignore:
+      - master
+      - development
+
+jobs:
+  setup:
+    name: Setup & Tests
+    runs-on: ubuntu-latest
+    env:
+      JWT_ACCESS_SECRET: access
+      JWT_REFRESH_SECRET: refresh
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '8.x'
+
+    - name: Install npm dependences
+      run: npm install
+
+    - name: ESLint test
+      run: npm run eslint
+
+    - name: Unit tests
+      run: npm run test

@@ -2,8 +2,8 @@
 
 const express   = require('express');
 const router    = express.Router();
-const cOrders   = require('../../../controllers/orders');
-const cPayments = require('../../../controllers/payments');
+const cOrders   = require('../../controllers/orders');
+const cPayments = require('../../controllers/payments');
 const passport  = require('../../services/passport');
 
 

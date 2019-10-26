@@ -2,7 +2,7 @@
 
 const URL           = require('url');
 const Models        = require('../models/index');
-const CloudPayments = require('../backend/services/cloudpayments');
+const CloudPayments = require('../services/cloudpayments');
 
 const allowedQueries = ['userid', 'ticket', 'maxpass'];
 

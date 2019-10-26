@@ -1,0 +1,427 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Selling Ticket System",
+    "description": "API Documentation",
+    "license": {
+      "name": "License MIT",
+      "url": "https://github.com/turovnd/selling-tickets-system-backend/LICENSE.md"
+    }
+  },
+  "host": "__HOST__",
+  "basePath": "/v1",
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+  "tags": [
+    {
+      "name": "auth",
+      "description": "Authorization endpoints, everything connected with it"
+    },
+    {
+      "name": "users",
+      "description": "Users endpoints for managing User model"
+    },
+    {
+      "name": "parks",
+      "description": "Parks endpoints for managing Park model"
+    },
+    {
+      "name": "orders",
+      "description": "Orders endpoints for managing Order model"
+    },
+    {
+      "name": "payments",
+      "description": "Payments endpoints for making a payment and verify it"
+    }
+  ],
+  "paths": {
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "required": [
+        "email",
+        "firstName",
+        "lastName",
+        "password"
+      ],
+      "properties": {
+        "_id": {
+          "type": "ObjectId"
+        },
+        "email": {
+          "type": "string"
+        },
+        "isAdmin": {
+          "type": "boolean",
+          "default": false
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string",
+          "default": "/no-user.png"
+        },
+        "password": {
+          "type": "string"
+        },
+        "emailSubscription": {
+          "type": "boolean",
+          "default": false
+        },
+        "isActivated": {
+          "type": "boolean",
+          "default": true
+        },
+        "emailConfirmed": {
+          "type": "boolean",
+          "default": false
+        },
+        "createdAt": {
+          "type": "date"
+        },
+        "updatedAt": {
+          "type": "date"
+        }
+      },
+      "xml": {
+        "name": "User"
+      }
+    },
+    "Park": {
+      "type": "object",
+      "required": [
+        "prefix",
+        "alias",
+        "logo",
+        "image",
+        "name"
+      ],
+      "properties": {
+        "_id": {
+          "type": "ObjectId"
+        },
+        "prefix": {
+          "type": "string"
+        },
+        "alias": {
+          "type": "string"
+        },
+        "logo": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "name": {
+          "$ref": "#/definitions/LocalizationObject"
+        },
+        "location": {
+          "$ref": "#/definitions/LocalizationObject"
+        },
+        "description": {
+          "$ref": "#/definitions/LocalizationObject"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "$ref": "#/definitions/LocalizationObject"
+              },
+              "icon": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "daysSelection": {
+          "type": "boolean",
+          "default": false,
+          "description": "switch on/off days selection widget"
+        },
+        "included": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "default": "null"
+            },
+            "list": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "isInclude": {
+                    "type": "boolean"
+                  },
+                  "text": {
+                    "$ref": "#/definitions/LocalizationObject"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "departure": {
+          "type": "object",
+          "properties": {
+            "point": {
+              "$ref": "#/definitions/LocalizationObject"
+            },
+            "time": {
+              "$ref": "#/definitions/LocalizationObject"
+            },
+            "note": {
+              "$ref": "#/definitions/LocalizationObject"
+            }
+          }
+        },
+        "additional": {
+          "$ref": "#/definitions/LocalizationObject"
+        },
+        "cancellation": {
+          "$ref": "#/definitions/LocalizationObject"
+        }
+      },
+      "xml": {
+        "name": "Park"
+      }
+    },
+    "Order": {
+      "type": "object",
+      "required": [
+        "realId",
+        "parkPrefix",
+        "parkAlias",
+        "ticketId",
+        "status",
+        "totalPrice",
+        "discount",
+        "startDate",
+        "endDate"
+      ],
+      "properties": {
+        "_id": {
+          "type": "ObjectId"
+        },
+        "realId": {
+          "type": "number"
+        },
+        "parkPrefix": {
+          "type": "string"
+        },
+        "parkAlias": {
+          "type": "string"
+        },
+        "ticketId": {
+          "type": "ObjectId"
+        },
+        "userId": {
+          "type": "ObjectId"
+        },
+        "status": {
+          "type": "number",
+          "default": "0",
+          "description": "0 - created, 1 - paid, 2 - confirmed, 3 - charged, 4 - refunded, 5 - canceled"
+        },
+        "locale": {
+          "type": "string",
+          "default": "en"
+        },
+        "totalPrice": {
+          "type": "number"
+        },
+        "discount": {
+          "type": "number"
+        },
+        "startDate": {
+          "type": "date"
+        },
+        "endDate": {
+          "type": "date"
+        },
+        "guests": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "isLead": {
+                "type": "boolean",
+                "default": false
+              },
+              "isAdult": {
+                "type": "boolean"
+              },
+              "lastName": {
+                "type": "sting"
+              },
+              "firstName": {
+                "type": "sting"
+              }
+            }
+          }
+        },
+        "tickets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "sting",
+                "description": "File name"
+              },
+              "mimetype": {
+                "type": "sting",
+                "description": "image/png | image/jpg | application/pdf"
+              },
+              "path": {
+                "type": "sting",
+                "description": "path in the server where file was stored"
+              },
+              "current": {
+                "type": "boolean",
+                "description": "Is it current version of the ticket or not?"
+              }
+            }
+          }
+        },
+        "paymentDetails": {
+          "type": "object",
+          "properties": {
+            "paymentMethod": {
+              "type": "sting"
+            },
+            "transactionId": {
+              "type": "number"
+            },
+            "status": {
+              "type": "boolean"
+            },
+            "reason": {
+              "type": "number"
+            },
+            "cardFirstSix": {
+              "type": "sting"
+            },
+            "cardLastFour": {
+              "type": "sting"
+            },
+            "cardExpDate": {
+              "type": "sting"
+            },
+            "requestFrom": {
+              "type": "sting"
+            }
+          }
+        },
+        "contactInfo": {
+          "type": "object",
+          "properties": {
+            "updates": {
+              "type": "boolean",
+              "default": false
+            },
+            "email": {
+              "type": "sting"
+            },
+            "phone": {
+              "type": "sting"
+            }
+          }
+        },
+        "createdAt": {
+          "type": "date"
+        },
+        "updatedAt": {
+          "type": "date"
+        }
+      },
+      "xml": {
+        "name": "Order"
+      }
+    },
+    "Ticket": {
+      "type": "object",
+      "required": [
+        "parkAlias",
+        "days",
+        "title",
+        "adultPrice",
+        "childrenPrice"
+      ],
+      "properties": {
+        "_id": {
+          "type": "ObjectId"
+        },
+        "parkAlias": {
+          "type": "string"
+        },
+        "days": {
+          "type": "number"
+        },
+        "title": {
+          "$ref": "#/definitions/LocalizationObject"
+        },
+        "description": {
+          "$ref": "#/definitions/LocalizationObject"
+        },
+        "adultPrice": {
+          "type": "number"
+        },
+        "childrenPrice": {
+          "type": "number"
+        },
+        "additionalIcon": {
+          "type": "string"
+        },
+        "additionalText": {
+          "$ref": "#/definitions/LocalizationObject"
+        },
+        "additionalTooltip": {
+          "$ref": "#/definitions/LocalizationObject"
+        }
+      },
+      "xml": {
+        "name": "Ticket"
+      }
+    },
+    "LocalizationObject": {
+      "type": "object",
+      "description": "Number of properties equal number of languages that system support",
+      "properties": {
+        "en": {
+          "type": "string",
+          "description": "English text"
+        },
+        "ru": {
+          "type": "string",
+          "description": "Russian text"
+        }
+      },
+      "xml": {
+        "name": "LocalizationObject"
+      }
+    }
+  }
+}

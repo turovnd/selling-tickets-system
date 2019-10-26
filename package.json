@@ -1,12 +1,11 @@
 {
   "name": "selling-tickets-system",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "The API Servier for selling tickets system",
   "author": "Nikolay Turov",
   "license": "MIT",
   "scripts": {
-    "prod": "pm2 start index.js --name=server",
-    "docker": "nodemon index.js",
+    "prod": "node index.js",
     "dev": "nodemon index.js",
     "eslint": "eslint controllers models routes services",
     "eslintfix": "eslint controllers models routes services --fix",

